@@ -26,13 +26,13 @@
             @csrf
             <input type="hidden" name="response_format" value="{{ $response_format }}" />
             <input type="hidden" name="reference_id" value="{{ $request->reference_id ?? uniqid() }}" />
-            @if ($errors)
+            @if ($errors->all())
                 <div class="alert alert-danger">
                     {{ implode(',', $errors->all()) }}
                 </div>
             @endif
             <div class="row">
-                <div class="col-md-8 order-md-1">
+                <div class="col-md-12 order-md-1">
                     <div class="border p-3 mb-3 rounded">
                         <h4 class="mb-3">Billing details</h4>
                         <div class="row">
