@@ -1,0 +1,33 @@
+{
+    "name": "jagdish-j-p/billdesk",
+    "description": "Package to integrate BillDesk Payment gateway in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JagdishJP",
+            "email": "jagdish.j.ptl@gmail.com"
+        }
+    ],
+    "require": {
+		"laravelcollective/html": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "JagdishJP\\Billdesk\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JagdishJP\\Billdesk\\BilldeskServiceProvider"
+            ]
+        }
+    }
+}
