@@ -105,7 +105,7 @@ php artisan billdesk:payment-status reference_id1,reference_id2,reference_id3
 
 ```php
 
-use JagdishJP/BillDesk/BillDesk;
+use JagdishJP/Billdesk/Billdesk;
 
 /**
  * Returns status of transaction
@@ -113,7 +113,7 @@ use JagdishJP/BillDesk/BillDesk;
  * @param string $reference_id reference order id
  * @return array
  */
-$status = billdesk::getTransactionStatus($reference_id);
+$status = Billdesk::getTransactionStatus($reference_id);
 ```
 
 You can also override `payment.blade.php` with your custom design to integrate with your layout. but do not change `name` attribute of html controls and `action` URL of form.
