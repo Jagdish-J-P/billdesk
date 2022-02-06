@@ -14,12 +14,6 @@ class AuthorizationRequest extends Message implements Contract
     use Encryption;
 
 	/**
-	 * Message code on the FPX side
-	 */
-	public const CODE = 'AR';
-
-
-	/**
 	 * Message Url
 	 */
 	public $url;
