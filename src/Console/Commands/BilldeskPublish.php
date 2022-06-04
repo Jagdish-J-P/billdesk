@@ -20,7 +20,7 @@ class BilldeskPublish extends Command
      *
      * @var string
      */
-    protected $description = 'Publishes FPX publishable resources.';
+    protected $description = 'Publishes Billdesk publishable resources.';
 
     /**
      * Create a new command instance.
@@ -50,7 +50,7 @@ class BilldeskPublish extends Command
                 return 0;
             }
 
-            $parameters = ['--provider' => 'JagdishJP\FpxPayment\FpxPaymentServiceProvider', '--tag' => "billdesk-{$publishable}"];
+            $parameters = ['--provider' => 'JagdishJP\Billdesk\BilldeskServiceProvider', '--tag' => "billdesk-{$publishable}"];
 
             if (Str::is($force, 'force')) {
                 $parameters['--force'] = null;
