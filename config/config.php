@@ -73,7 +73,7 @@ return [
         ],
         'production' => [
             'payment_request'     => 'https://pgi.billdesk.com/pgidsk/PGIMerchantPayment',
-            'transaction_enquiry' => 'https://uat.billdesk.com/pgidsk/PGIQueryController',
+            'transaction_enquiry' => 'https://www.billdesk.com/pgidsk/PGIQueryController',
         ],
     ],
 ];

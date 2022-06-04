@@ -62,7 +62,7 @@ class TransactionStatus extends Command
                 $this->newLine();
                 $this->newLine();
 
-                $this->table(collect(Arr::first($status))->keys(), $status);
+                $this->table(collect(Arr::first($status))->keys()->toArray(), $status);
                 $this->newLine();
 
                 $bar->finish();
