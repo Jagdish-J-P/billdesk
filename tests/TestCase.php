@@ -1,6 +1,6 @@
 <?php
 
-namespace JagdishJP\SBIPay\Tests;
+namespace JagdishJP\Billdesk\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -16,7 +16,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \JagdishJP\SBIPay\SBIPayServiceProvider::class,
+            \JagdishJP\Billdesk\BilldeskServiceProvider::class,
         ];
     }
 

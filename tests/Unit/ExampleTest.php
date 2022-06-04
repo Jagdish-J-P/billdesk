@@ -1,6 +1,6 @@
 <?php
 
-namespace JagdishJP\SBIPay\Tests\Unit;
+namespace JagdishJP\Billdesk\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

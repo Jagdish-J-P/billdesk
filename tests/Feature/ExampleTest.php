@@ -1,9 +1,9 @@
 <?php
 
-namespace JagdishJP\SBIPay\Tests\Feature;
+namespace JagdishJP\Billdesk\Tests\Feature;
 
 use Artisan;
-use JagdishJP\SBIPay\Tests\TestCase;
+use JagdishJP\Billdesk\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
