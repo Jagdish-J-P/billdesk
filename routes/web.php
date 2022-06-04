@@ -20,5 +20,5 @@ Route::get(
 
 Route::post('billdesk/payment/request', [PaymentController::class, 'handle'])->name('billdesk.payment.auth.request');
 
-Route::post($webhookPath, [Controller::class, 'webhook'])->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->name('billdesk.payment.webhook');
-Route::post($responsePath, [Controller::class, 'callback'])->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->name('billdesk.payment.response.url');
+Route::post($webhookPath, [Controller::class, 'webhook'])/* ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]) */->name('billdesk.payment.webhook');
+Route::post($responsePath, [Controller::class, 'callback'])/* ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]) */->name('billdesk.payment.response.url');
