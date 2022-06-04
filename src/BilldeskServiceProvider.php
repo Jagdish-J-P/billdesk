@@ -5,10 +5,8 @@ namespace JagdishJP\Billdesk;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use JagdishJP\Billdesk\Commands\TransactionStatusCommand;
 use JagdishJP\Billdesk\Console\Commands\BilldeskPublish;
 use JagdishJP\Billdesk\Console\Commands\TransactionStatus;
-use JagdishJP\Billdesk\Console\Commands\TransactionStatusCommand as CommandsTransactionStatusCommand;
 
 class BilldeskServiceProvider extends ServiceProvider
 {
@@ -19,7 +17,7 @@ class BilldeskServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php','billdesk');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'billdesk');
     }
 
     /**
@@ -29,21 +27,19 @@ class BilldeskServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         $this->configureRoutes();
 
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views','billdesk');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'billdesk');
 
         $this->configurePublish();
-
     }
 
     public function configureRoutes()
     {
         Route::group([
-            'middleware' => Config::get('billdesk.middleware')
+            'middleware' => Config::get('billdesk.middleware'),
         ], function () {
             $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         });
@@ -51,7 +47,7 @@ class BilldeskServiceProvider extends ServiceProvider
 
     public function configurePublish()
     {
-        if($this->app->runningInConsole()) {
+        if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/config.php' => config_path('billdesk.php'),
             ], 'billdesk-config');
@@ -70,7 +66,7 @@ class BilldeskServiceProvider extends ServiceProvider
 
             $this->commands([
                 BilldeskPublish::class,
-                TransactionStatus::class
+                TransactionStatus::class,
             ]);
         }
     }
