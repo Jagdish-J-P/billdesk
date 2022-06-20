@@ -8,7 +8,6 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Validator;
-use JagdishJP\Billdesk\Constant\Response;
 use JagdishJP\Billdesk\Contracts\Message as Contract;
 use JagdishJP\Billdesk\Models\Transaction;
 use JagdishJP\Billdesk\Traits\Encryption;
