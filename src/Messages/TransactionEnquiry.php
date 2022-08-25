@@ -105,8 +105,8 @@ class TransactionEnquiry extends Message implements Contract
         return collect([
             'RequestType'     => $this->typeField1 ?? '',
             'MerchantID'      => $this->merchantId ?? '',
-            'UniqueTxnID'     => $this->reference ?? '',
-            'TransactionTime' => $this->timestamp ?? now()->format('YmdHis'),
+            'UniqueTxnID'     => $this->reference  ?? '',
+            'TransactionTime' => $this->timestamp  ?? now()->format('YmdHis'),
         ]);
     }
 
