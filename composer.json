@@ -22,12 +22,12 @@
         "psr-4": {}
     },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "dragon-code/codestyler": true,
             "ergebnis/composer-normalize": true,
             "friendsofphp/php-cs-fixer": true
-        }
+        },
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
