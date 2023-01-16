@@ -47,7 +47,8 @@ class TransactionStatus extends Command
         if ($reference_ids) {
             $reference_ids = explode(',', $reference_ids);
             $reference_ids = Transaction::whereIn('reference_id', $reference_ids)->get('reference_id')->toArray();
-        } else {
+        }
+        else {
             $reference_ids = Transaction::whereNull('transaction_status')->orWhere('transaction_status', TransactionEnquiry::STATUS_PENDING_CODE)->get('reference_id')->toArray();
         }
 
@@ -66,13 +67,15 @@ class TransactionStatus extends Command
                 $this->newLine();
 
                 $bar->finish();
-            } catch (Exception $e) {
+            }
+            catch (Exception $e) {
                 $this->error($e->getMessage());
                 logger('Transaction Status', [
                     'message' => $e->getMessage(),
                 ]);
             }
-        } else {
+        }
+        else {
             $this->error('There is no Pending transactions.');
             logger('Transaction Status', [
                 'message' => 'There is no Pending transactions.',

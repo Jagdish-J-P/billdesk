@@ -152,7 +152,8 @@ class Message
     {
         do {
             $uuid = Str::uuid();
-        } while (Transaction::where('unique_id', $uuid)->first());
+        }
+        while (Transaction::where('unique_id', $uuid)->first());
 
         return $uuid;
     }

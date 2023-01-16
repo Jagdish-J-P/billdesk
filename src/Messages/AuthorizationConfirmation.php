@@ -72,7 +72,8 @@ class AuthorizationConfirmation extends Message implements Contract
                 'reference_id'    => $this->reference,
                 'response_format' => $this->responseFormat,
             ];
-        } catch (Exception $e) {
+        }
+        catch (Exception $e) {
             return [
                 'status'          => self::STATUS_FAILED,
                 'message'         => $e->getMessage(),
